@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+""
+for ip in "$1"; do
+    if ping -c 5 "$ip"
+    then echo "5-is_the_host_on_the_network {IP_ADDRESS}"
+    else ping -c 5 "$ip"
+    fi
+done
